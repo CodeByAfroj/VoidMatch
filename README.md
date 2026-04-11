@@ -27,7 +27,7 @@ Showcase your skills, explore existing teams, and identify missing roles instant
 
 > The entry point. Simple, bold hero with a single CTA to initialize your persona.
 
-![System Core – Landing](./public/screenshots/landing.png)
+<img src="./public/screenshots/Landing.png" alt="System Core – Landing Page" width="100%" />
 
 ---
 
@@ -35,7 +35,7 @@ Showcase your skills, explore existing teams, and identify missing roles instant
 
 > Browse squads that need your specific skill. Each card shows match %, capacity, and the critical void role.
 
-![Discovery Feed – Squad Matching](./public/screenshots/discovery.png)
+<img src="./public/screenshots/Discovery.png" alt="Discovery Feed – Active Squads" width="100%" />
 
 ---
 
@@ -43,7 +43,7 @@ Showcase your skills, explore existing teams, and identify missing roles instant
 
 > Full directory of all registered squads across the network, filterable by status: All, Missing Skill, or Complete.
 
-![All Teams – Squad Directory](./public/screenshots/all-teams.png)
+<img src="./public/screenshots/SquadDir.png" alt="All Teams – Squad Directory" width="100%" />
 
 ---
 
