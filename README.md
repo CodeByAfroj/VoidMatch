@@ -1,73 +1,150 @@
-# React + TypeScript + Vite
+<div align="center">
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# ✦ VoidMatch
 
-Currently, two official plugins are available:
+**Find your place by filling the void.**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Showcase your skills, explore existing teams, and identify missing roles instantly through intelligent data visualization.
 
-## React Compiler
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=flat-square&logo=react)](https://react.dev)
+[![TypeScript](https://img.shields.io/badge/TypeScript-6-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org)
+[![Vite](https://img.shields.io/badge/Vite-8-646CFF?style=flat-square&logo=vite)](https://vitejs.dev)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-4-06B6D4?style=flat-square&logo=tailwindcss)](https://tailwindcss.com)
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+</div>
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Overview
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**VoidMatch** is a dark-themed team formation platform that uses interactive radar chart visualizations to help developers find and fill skill gaps in tech squads. Users can browse active squads, see which roles are missing, and instantly join teams as a solo protocol or as part of a group.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+---
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Screenshots
+
+### 🏠 System Core — Landing Page
+
+> The entry point. Simple, bold hero with a single CTA to initialize your persona.
+
+![System Core – Landing](./public/screenshots/landing.png)
+
+---
+
+### 🔭 Discovery Feed — Active Squads
+
+> Browse squads that need your specific skill. Each card shows match %, capacity, and the critical void role.
+
+![Discovery Feed – Squad Matching](./public/screenshots/discovery.png)
+
+---
+
+### 🗂 All Teams — Squad Directory
+
+> Full directory of all registered squads across the network, filterable by status: All, Missing Skill, or Complete.
+
+![All Teams – Squad Directory](./public/screenshots/all-teams.png)
+
+---
+
+## Features
+
+- **Skill Radar Charts** — D3-powered pentagonal radar charts visualize each team's current skill coverage at a glance
+- **Smart Match Scoring** — Every squad displays a dynamic match percentage based on your profile vs. team voids
+- **Critical Void Detection** — Teams with urgent missing roles are flagged with a `CRITICAL VOID` badge
+- **Instajoin Flow** — Zero-friction onboarding to fill a team void directly from the discovery feed
+- **Solo Protocol Mode** — Toggle between viewing active squads or available solo developers
+- **Squad Directory** — Filter all registered teams by `All`, `Missing Skill`, or `Complete` status
+- **Persistent State** — Global app context keeps team rosters and user profile in sync across all views
+- **Fluid Animations** — Framer Motion powers all page transitions and micro-interactions
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Framework | React 19 + TypeScript |
+| Build Tool | Vite 8 |
+| Styling | Tailwind CSS v4 |
+| Routing | React Router v7 |
+| Animations | Framer Motion |
+| Data Viz | D3.js |
+| Icons | Lucide React |
+| State | React Context API |
+
+---
+
+## Project Structure
+
+```
+src/
+├── components/
+│   ├── 3D/               # Three.js 3D elements
+│   ├── Layout/           # Navbar and shared layout
+│   ├── SkillRadar/       # D3 radar chart component
+│   └── Visualizations/   # Other chart & visual components
+├── contexts/
+│   └── AppContext.tsx    # Global state management
+├── pages/
+│   ├── Onboarding.tsx        # / — System Core landing & persona setup
+│   ├── DiscoveryDashboard.tsx # /discover — Smart squad matching feed
+│   ├── Teams.tsx              # /teams — Full squad directory
+│   └── TeamDashboard.tsx      # /team/:id — Individual team view
+├── lib/                  # Utility functions
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Getting Started
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Prerequisites
+
+- Node.js 18+
+- npm or yarn
+
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/voidmatch.git
+cd voidmatch
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start local dev server |
+| `npm run build` | Production build |
+| `npm run preview` | Preview production build |
+| `npm run lint` | Run ESLint |
+
+---
+
+## Routes
+
+| Path | Page | Description |
+|---|---|---|
+| `/` | System Core | Landing page & persona initialization |
+| `/discover` | Discovery Feed | Skill-matched squad suggestions |
+| `/teams` | All Teams | Full squad directory with filters |
+| `/team/:id` | Team Dashboard | Individual squad details & roster |
+
+---
+
+<div align="center">
+
+Built with 🟣 by **Afroj Mulani** && **Arbaz Makandar**
+
+</div>
