@@ -145,6 +145,6 @@ Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 <div align="center">
 
-Built with 🟣 by **Afroj Mulani** && **Arbaz Makandar**
+Built with ❤️ by **Afroj Mulani** & **Arbaz Makandar**
 
 </div>
