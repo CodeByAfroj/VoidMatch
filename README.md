@@ -1,6 +1,6 @@
 <div align="center">
 
-# ✦ VoidMatch
+# ✦ VoidMatch ✦ 
 
 **Find your place by filling the void.**
 
